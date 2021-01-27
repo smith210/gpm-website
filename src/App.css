@@ -1,0 +1,72 @@
+/*======================================================================*/
+/* IMPORT FONTS SUGGESTED FOR A WWU WEBSITE & APPLY RULES TO ALL COMPONENTS*/
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat/Montserrat-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Fira-Sans";
+  src: url("/fonts/Fira_Sans/FiraSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Fira-SansB";
+  src: url("/fonts/Fira_Sans/FiraSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: "PT-Serif";
+  src: url("/fonts/pt-serif/PTF75F.ttf");
+}
+
+@font-face {
+  font-family: "Fira-SansCondensed";
+  src: url("/fonts/FiraSansCondensed/FiraSansCondensed-Regular.otf");
+}
+
+
+html * {
+	box-sizing: border-box;
+	font-family: "Fira-Sans";
+	font-size: calc(16px + 6 * ((100vw - 300px)/ 1000));
+	line-height: 1.5em;
+}
+
+.page-title, .title {
+	font-size: calc(24px + 20 * ((100vw - 300px)/ 1000));
+	font-family: "Montserrat";
+}
+
+.side-menu li button{
+	font-size: calc(13px + 6 * ((100vw - 300px)/ 1000));
+}
+
+/*======================================================================*/
+/* GENERAL CONTENT LAYOUT */
+.body{
+    display: -ms-grid;
+    display: grid;
+    margin: 12px 0 24px;
+    -ms-grid-rows: auto;
+    grid-template-areas:
+        " . skip_to_content . "
+        " . content . ";
+    grid-template-rows: auto;
+    -ms-grid-columns: 12px 1fr 12px;
+    grid-template-columns: 12px 1fr 12px;
+
+}
+
+.Content{
+    grid-area: content;
+}
+
+@media (min-width: 1300px){
+.body{
+    -ms-grid-columns: 1fr 1300px 1fr;
+    grid-template-columns: 1fr 1300px 1fr;
+}
+}
+

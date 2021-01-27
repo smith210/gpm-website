@@ -1,0 +1,36 @@
+.logo{
+    width: 212px;
+    height: 136px;
+    padding: 12px;
+    background-color: #003f87;
+    margin: 0;
+}
+
+.visually-hidden {
+    position: absolute!important;
+    overflow: hidden;
+    clip: rect(1px,1px,1px,1px);
+    width: 1px;
+    height: 1px;
+    word-wrap: normal;
+}
+
+.logo svg {
+    width: 100%;
+    height: 100%;
+}
+
+.cls-5 {
+	fill:#fff;
+}
+
+.cls-2 {
+	fill: #007ac8;
+}
+
+@media (min-width: 841px){
+	.logo {
+    		width: 266px;
+    		height: 170px;
+	}
+}

@@ -1,0 +1,155 @@
+/*======================================================================*/
+
+/* - - - all links will have the same font - - - */
+.western-header a, .splash a, .region a{
+	font-family: "Fira-SansCondensed";
+}
+
+
+/*- - - - - - - - - - GENERAL TEMPLATING STYLING - - - - - - - - - - -- */
+/*- - - - - - - determines where the components are placed - - - - - - -*/
+/*- - - - - - - - - - - - (based on window size)  - - - - - - - - - - - */
+
+
+.western-header {
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(to left,rgba(255,255,255,.7) 50%,rgba(255,255,255,.2) 100%);
+}
+
+
+.splash {
+    display: -ms-grid;
+    display: grid;
+    background-image: linear-gradient(#003f87,#007ac8);
+    -ms-grid-columns: 12px 1fr 12px;
+    -ms-grid-rows: 25vh 1fr 24px;
+    grid-template-areas:
+        ". ....... ."
+        ". content ."
+        ". ....... .";
+    grid-template-columns: 12px 1fr 12px;
+    grid-template-rows: 58px 52px 70px 1fr 53px;
+
+    grid-column: 1/span all;
+}
+
+
+@media (min-width:841px){
+.western-header {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 12px 1fr 12px;
+    -ms-grid-rows: auto;
+    grid-template-columns: 12px 1.9fr 12px;
+    grid-template-rows: auto;
+}
+
+.splash {
+    margin-top: -58px;
+    grid-template-areas:
+        ". ....... ."
+        ". ....... ."
+        ". ....... ."
+        ". content ."
+        ". ....... .";
+    -ms-grid-rows: 58px 52px 168px 1fr 53px;
+    grid-template-rows: 58px 52px 168px 1fr 53px;
+}
+}
+
+@media (min-width:1300px){
+.splash, .western-header {
+    -ms-grid-columns: 1fr 1300px 1fr;
+    grid-template-columns: 1fr 1300px 1fr;
+}
+
+.splash {
+    margin-top: -68px;
+    -ms-grid-rows: 266px 1fr 58px;
+    grid-template-rows: 68px 52px 158px 1fr 58px;
+}
+}
+
+/*======================================================================*/
+
+/* MOBILE MENU ICON STYLES*/
+/* !!   NOTE -- this button should NOT display for devices like computer or tablet    !! */
+
+.mobile-menu-icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 68px;
+    height: 68px;
+    padding: 0;
+    color: #fff;
+    border: 0;
+    border-radius: 0;
+    background: #007ac8;
+    box-shadow: none;
+    transition: background .4s,color .4s,box-shadow .2s;
+    font-size: 45px;
+}
+
+.mobile-menu-icon .menu-line{
+    width: 28px;
+    height: 3.1px;
+    background-color: #fff;
+
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 4.5px;
+    margin-bottom: 4.5px;
+}
+
+.mobile-menu-icon:hover{
+    background-color: #002f5e;
+}
+
+@media (min-width:841px){
+	.mobile-menu-icon{
+		display: none;
+	}
+}
+
+
+/*======================================================================*/
+/* MENU STYLES*/
+
+.region-nav {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    right: -100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 100%;
+    opacity: 0;
+    height: 100vh;
+    background: #003f87;
+
+    transition: right .3s linear, opacity .3s linear, display .3s linear;
+    
+}
+
+@media (min-width: 841px){
+    .region-nav{
+	display: block!important;
+
+        position: inherit;
+        left: 0!important;
+        overflow-x: visible;
+        overflow-y: visible;
+        margin-top: -29px;
+        margin-bottom: 29px;
+        opacity: 1!important;
+        height: inherit;
+        min-height: 0;
+        background: 0 0;
+    }
+
+    .mobile-quick-links{
+        display: none;
+    }
+}

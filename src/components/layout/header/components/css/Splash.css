@@ -1,0 +1,31 @@
+.splash {
+    grid-area: content;
+    height: 100%;
+    display: block;
+}
+.splash-span {
+    -ms-grid-column: 1;
+    grid-column: 1/span all;
+    -ms-grid-column-span: 3;
+    -ms-grid-row: 1;
+    grid-row: 1/span all;
+    -ms-grid-row-span: 3;
+}
+
+.splash-content {
+    width: 100%;
+    height: 100%;
+    background: url("/images/board-splash.jpg");
+    background-size: cover;
+}
+
+.splash img {
+    object-position: 50%;
+}
+
+.splash img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

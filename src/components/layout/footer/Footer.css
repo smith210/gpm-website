@@ -1,0 +1,201 @@
+.dept-foot a, .wwu-foot a {
+	transition: background-color .4s;
+
+}
+
+i {
+	padding-right: 10px;
+}
+
+/* Graduate School and CS Footer styles */
+
+.dept {
+    height: 80px;
+}
+
+.dept h2 {
+    margin-bottom: 0px;
+}
+
+.dept-foot {
+    color: #fff;
+    background: #007ac8;
+    display: -ms-grid;
+    display: grid;
+    padding: 36px 0;
+    -ms-grid-rows: auto 12px auto 12px auto;
+    grid-template-areas:
+        ". footer_left ."
+        ". ............. ."
+        ". footer_center ."
+        ". ............. ."
+        ". footer_right ."
+        ". footer_bottom .";
+    grid-template-rows: auto 12px auto 12px auto;
+}
+
+
+.dept-foot p{
+	height: 50px;
+}
+
+.dept-foot a{
+	color: #fff;
+}
+
+
+.dept-foot .region-left{
+	grid-area: footer_left;
+}
+
+
+.dept-foot a:hover{
+    color: #d6e86c;
+    background: #003f87;
+    text-decoration: none;
+}
+
+.dept-foot .region-center{
+	grid-area: footer_center;
+}
+
+.dept-foot .region-right{
+	grid-area: footer_right;
+}
+
+.dept-info h2{
+    margin-top: 0;
+    font-family: "Fira-SansB",sans-serif;
+    color: #d6e86c;
+}
+
+
+.address p {
+    margin-bottom: 0px;
+    width: calc(1.5px * vw);
+    padding: 5px;
+    padding-left: 3px;
+}
+
+
+.wwu-branch {
+   font-size: 16px;
+   margin-left: 16px;
+   margin-bottom: 0;
+   padding-top: 3px;
+   border-top: 3px solid white;
+   text-align: center;
+   font-family: "Fira-Sans";
+   letter-spacing: calc(1vw/3);
+}
+
+/* WWU Content Footer styles */
+
+.wwu-foot {
+    color: #fff;
+    background: #003f87;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto 12px auto 12px auto 12px;
+    grid-template-areas:
+        ". .... ."
+        ". logo ."
+        ". .... ."
+        ". info ."
+        ". ..... ."
+        ". icons .";
+    grid-template-rows: repeat(3, 12px auto) ;
+    grid-template-columns: 12px 1fr 12px;
+    justify-items: center;
+}
+
+.wwu-foot .wwu-info {
+    text-align: center;
+    grid-area: info;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+}
+
+.wwu-foot .logo-bottom {
+    grid-area: logo;
+    -ms-grid-column-span: 1;
+    -ms-grid-row-span: 1;
+}
+
+
+.wwu-foot a{
+    color: #41b6ff;
+    text-decoration: underline;
+}
+
+.wwu-foot a:hover{
+    color: #d6e86c;
+    background-color: #002f5e;
+    text-decoration: none;
+}
+
+
+@media (min-width: 581px){
+.wwu-foot {
+    -ms-grid-columns: 12px 1fr 2fr 12px;
+    -ms-grid-rows: 36px auto auto 36px;
+    grid-template-areas:
+        ". .... ..... ."
+        ". logo info ."
+        ". logo icons ."
+        ". .... ..... .";
+    grid-template-columns: 12px 1fr 2fr 12px;
+    grid-template-rows: 36px auto auto 36px;
+
+}
+
+.wwu-foot .logo-bottom{
+    justify-self: end;
+}
+
+.wwu-foot .wwu-info {
+    text-align: right;
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    -ms-grid-row-span: 1;
+    justify-self: center;
+}
+
+}
+
+
+@media (min-width: 841px){
+.dept-foot {
+    -ms-grid-columns: 12px 1fr 12px 1fr 12px 1fr 12px;
+    -ms-grid-rows: auto auto;
+    grid-template-areas:
+        ". footer_left . footer_center . footer_right ."
+        ". footer_bottom footer_bottom footer_bottom footer_bottom footer_bottom .";
+    grid-template-columns: 12px 1fr 12px 1fr 12px 1fr 12px;
+    grid-template-rows: auto auto;
+}
+
+.logo {
+    width: 266px;
+    height: 266px;
+}
+
+
+
+
+}
+
+
+@media (min-width: 1350px){
+.dept-foot {
+    -ms-grid-columns: 1fr 433.33333px 12px 433.33333px 12px 433.33333px 1fr;
+    grid-template-columns: 1fr 433.33333px 12px 433.33333px 12px 433.33333px 1fr;
+}
+.wwu-foot {
+    -ms-grid-columns: 1fr 433.33333px 866.66667px 1fr;
+    grid-template-columns: 1fr 433.33333px 866.66667px 1fr;
+}
+}
